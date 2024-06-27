@@ -56,6 +56,11 @@ export const adminRoutes = [
         menuUrl: '/system/menu',
         menuName: '菜单管理',
       },
+      {
+        parentPath: '/system',
+        menuUrl: '/system/datasource',
+        menuName: '数据源管理',
+      },
     ],
   },
   {

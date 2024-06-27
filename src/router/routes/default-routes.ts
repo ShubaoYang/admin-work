@@ -55,6 +55,11 @@ export default [
         menuUrl: '/system/menu',
         menuName: '菜单管理',
       },
+      {
+        parentPath: '/system',
+        menuUrl: 'datasource',
+        menuName: '数据源管理',
+      },
     ],
   },
 ]
