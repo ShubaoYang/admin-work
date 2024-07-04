@@ -59,7 +59,7 @@ export const useTable = function <T = any>(): Table<T> {
   const tableLoading = ref(true)
   const handleSuccess = ({ data = [] }: { data: T[] }): Promise<T[]> => {
     tableLoading.value = false
-    dataList.value = data
+    dataList.value = (data as any).records
     return Promise.resolve(data)
   }
   const handleSelectionChange = (tempSelectRows: Array<string | number>) => {

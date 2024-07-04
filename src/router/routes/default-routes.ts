@@ -56,5 +56,5 @@ export default [
         menuName: '菜单管理',
       },
     ],
-  },
+  }
 ]
