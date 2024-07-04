@@ -61,5 +61,5 @@ export default [
         menuName: '数据源管理',
       },
     ],
-  },
+  }
 ]

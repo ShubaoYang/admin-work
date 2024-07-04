@@ -25,6 +25,23 @@ export const adminRoutes = [
     ],
   },
   {
+    menuUrl: '/datasource',
+    menuName: '数据源管理',
+    iconPrefix: 'iconfont',
+    icon: 'setting',
+    parentPath: '',
+    children: [
+      {
+        parentPath: '/datasource',
+        menuUrl: '/datasource',
+        menuName: '数据源',
+        badge: 'new',
+        localFilePath: '/datasource/datasource',
+        routeName: 'datasource',
+      },
+    ],
+  },
+  {
     menuUrl: '/system',
     menuName: '系统管理',
     iconPrefix: 'iconfont',

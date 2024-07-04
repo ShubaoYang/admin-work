@@ -7,6 +7,7 @@ import {
   getCommentList,
   addDepartment,
   getRoleList,
+  getDatasourcePage,
 } from '@/api/url'
 
 const isDev = import.meta.env.MODE === 'development'
@@ -103,6 +104,33 @@ Mock.mock(RegExp(getRoleList), 'post', function () {
     ],
   })
 })
+
+
+// Mock.mock(RegExp(getDatasourcePage), 'get', function () {
+//   return Mock.mock({
+//     ...baseData,
+//     data: [
+//       {
+//         id: 1,
+//         name: 'bi',
+//         host: 'localhost',
+//         port: 3306,
+//         databaseName: 'mysql',
+//         username: 'test',
+//         password: 'test',
+//       },
+//       {
+//         id: 2,
+//         name: 'starrocks',
+//         host: 'localhost',
+//         port: 9030,
+//         databaseName: 'mysql',
+//         username: 'test',
+//         password: 'test',
+//       },
+//     ],
+//   })
+// })
 
 Mock.mock(RegExp(addDepartment), 'post', function () {
   return Mock.mock({ ...baseData, data: '' })

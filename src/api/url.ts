@@ -2,6 +2,13 @@ import { baseURL } from './axios.config'
 
 export const baseAddress = baseURL
 
+
+export const getDatasourcePage = '/datasource/page'
+export const getDatasourceById = '/datasource'
+export const saveDatasourceById = '/datasource'
+
+
+
 export const test = '/test'
 
 export const login = '/login'
