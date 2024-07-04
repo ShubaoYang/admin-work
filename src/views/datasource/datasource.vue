@@ -58,7 +58,8 @@ import { number } from 'echarts'
     name: string
     host: string
     port: number
-    databaseName: string
+    defaultSchema: string
+    dataSourceType: string
     username: string
     password: string
   }
@@ -157,8 +158,29 @@ import { number } from 'echarts'
       },
     },
     {
+      label: 'schema',
+      key: 'defaultSchema',
+      value: ref(null),
+      validator: (formItem, message) => {
+        if (!formItem.value.value) {
+          message.error('请输入schema')
+          return false
+        }
+        return true
+      },
+      render: (formItem) => {
+        return h(NInput, {
+          value: formItem.value.value,
+          onUpdateValue: (val) => {
+            formItem.value.value = val
+          },
+          placeholder: '请输入schema',
+        })
+      },
+    },
+    {
       label: '数据库类型',
-      key: 'databaseName',
+      key: 'dataSourceType',
       value: ref(null),
       maxLength: 50,
       inputType: 'text',
@@ -278,8 +300,12 @@ import { number } from 'echarts'
             key: 'port',
           },
           {
+            title: 'schema',
+            key: 'defaultSchema',
+          },
+          {
             title: '数据库类型',
-            key: 'databaseName',
+            key: 'dataSourceType',
           },
           {
             title: '账号',
@@ -370,7 +396,8 @@ import { number } from 'echarts'
                 name: dataFormRef.value.generatorParams().name,
                 host: dataFormRef.value.generatorParams().host,
                 port: dataFormRef.value.generatorParams().port,
-                databaseName: dataFormRef.value.generatorParams().databaseName,
+                defaultSchema: dataFormRef.value.generatorParams().defaultSchema,
+                dataSourceType: dataFormRef.value.generatorParams().dataSourceType,
                 username: dataFormRef.value.generatorParams().username,
                 password: dataFormRef.value.generatorParams().password,
               }

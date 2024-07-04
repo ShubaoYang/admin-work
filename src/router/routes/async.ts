@@ -34,6 +34,17 @@ export const asyncRoutes = [
           icon: 'menu',
         },
       },
+      {
+        path: 'datasource',
+        name: 'DataSource',
+        component: () => import('@/views/index/datasource.vue'),
+        meta: {
+          title: '数据源',
+          affix: true,
+          iconPrefix: 'iconfont',
+          icon: 'menu',
+        },
+      },
     ],
   },
 ]

@@ -22,6 +22,29 @@ export default [
         menuName: '工作台',
         routeName: 'workPlace',
       },
+      {
+        parentPath: '/index',
+        menuUrl: '/index/datasource',
+        menuName: '数据源',
+        routeName: 'datasource',
+      },
+    ],
+  },
+  {
+    menuUrl: '/datasource',
+    menuName: '数据源管理',
+    iconPrefix: 'iconfont',
+    icon: 'setting',
+    parentPath: '',
+    children: [
+      {
+        parentPath: '/datasource',
+        menuUrl: '/datasource/index',
+        menuName: '数据源',
+        badge: 'new',
+        localFilePath: '/datasource/datasource',
+        routeName: 'datasource',
+      },
     ],
   },
   {
@@ -54,11 +77,6 @@ export default [
         parentPath: '/system',
         menuUrl: '/system/menu',
         menuName: '菜单管理',
-      },
-      {
-        parentPath: '/system',
-        menuUrl: 'datasource',
-        menuName: '数据源管理',
       },
     ],
   }

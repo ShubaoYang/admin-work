@@ -22,6 +22,13 @@ export const adminRoutes = [
         routeName: 'workPlace',
         isRootPath: true,
       },
+      {
+        parentPath: '/index',
+        menuUrl: '/index/datasource',
+        menuName: '数据源',
+        routeName: 'datasource',
+        // isRootPath: true,
+      },
     ],
   },
   {
@@ -33,7 +40,7 @@ export const adminRoutes = [
     children: [
       {
         parentPath: '/datasource',
-        menuUrl: '/datasource',
+        menuUrl: '/datasource/datasource',
         menuName: '数据源',
         badge: 'new',
         localFilePath: '/datasource/datasource',
@@ -72,11 +79,6 @@ export const adminRoutes = [
         parentPath: '/system',
         menuUrl: '/system/menu',
         menuName: '菜单管理',
-      },
-      {
-        parentPath: '/system',
-        menuUrl: '/system/datasource',
-        menuName: '数据源管理',
       },
     ],
   },
